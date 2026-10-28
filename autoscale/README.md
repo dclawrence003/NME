@@ -1,3 +1,9 @@
+> **This repo has moved.** The tools now live at [Get-Nerdio/NME-SE](https://github.com/Get-Nerdio/NME-SE) and this copy is archived. It still works, but it no longer gets fixes. Use the new command:
+>
+> ```
+> iex (irm 'https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/autoscale/Get-NerdioAutoscaleSheet.ps1')
+> ```
+
 # Scaling Plan to NME Auto-Scale Profile
 
 Turns your Azure Virtual Desktop **scaling plans** into exact entries for Nerdio Manager's **Create Auto-Scale Profile** screen: an HTML page with one profile card per host pool, laid out the way the NME screen is, plus a review CSV of every number and where it came from.

@@ -177,6 +177,8 @@ function Format-Days {
 if (-not (Get-AzContext)) { throw "No Azure context. In Cloud Shell this is automatic; locally run Connect-AzAccount first." }
 
 # ------------------------------------------------------------------- 1. scaling plans
+Write-Warn2 "THIS TOOL HAS MOVED to https://github.com/Get-Nerdio/NME-SE (folder autoscale). This copy still works but no longer gets fixes. Use:"
+Write-Warn2 "    iex (irm 'https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/autoscale/Get-NerdioAutoscaleSheet.ps1')"
 Write-Info "[1/5] Inventorying scaling plans via Resource Graph..."
 $planRows = Invoke-ArgQuery -Query @"
 resources

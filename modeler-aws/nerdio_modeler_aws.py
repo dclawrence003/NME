@@ -1139,7 +1139,7 @@ def check_version():
         with urllib.request.urlopen(VERSION_URL + '?nocache=%d' % random.randint(1, 10 ** 9), timeout=5) as r:
             latest = r.read().decode().strip()
         if latest and latest != SCRIPT_VERSION:
-            LOG.warn('THIS COPY IS STALE: it is %s, but the published version is %s. Re-download before sending results.' % (SCRIPT_VERSION, latest))
+            LOG.warn('THIS COPY IS STALE: it is %s, but the published version is %s. Re-download from https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-aws/nerdio_modeler_aws.py before sending results.' % (SCRIPT_VERSION, latest))
     except Exception:
         pass
 
@@ -1149,6 +1149,7 @@ def main(argv=None, client_factory=None):
     LOG.lines.clear()
     ACCESS.clear()   # per run, like the log; the test harness runs main() several times in one process
     LOG.info('%s %s' % (TOOL_NAME, SCRIPT_VERSION))
+    LOG.warn('THIS TOOL HAS MOVED to https://github.com/Get-Nerdio/NME-SE (folder modeler-aws). This copy still works but no longer gets fixes. Use: curl -sSL https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-aws/nerdio_modeler_aws.py | python3 -')
     try:
         import boto3 as _b3, botocore as _bc
         LOG.info('Python %d.%d.%d, boto3 %s, botocore %s' % (sys.version_info[0], sys.version_info[1], sys.version_info[2], _b3.__version__, _bc.__version__))

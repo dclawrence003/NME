@@ -608,6 +608,8 @@ catch { Write-Warn2 "Console transcript unavailable ($($_.Exception.Message)) - 
 # SHA-pinned command keeps old code alive forever, and an old copy looks fine
 # until its output is compared against a fresh one.
 Write-Info "Get-NerdioModelerJson $ScriptVersion"
+Write-Warn2 "THIS TOOL HAS MOVED to https://github.com/Get-Nerdio/NME-SE (folder modeler-avd). This copy still works but no longer gets fixes. Use:"
+Write-Warn2 "    iex (irm 'https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-avd/Get-NerdioModelerJson.ps1')"
 # Stale-copy self-check: compare against the published version marker. Any
 # failure (offline, proxy, repo moved) stays silent - freshness advice must
 # never break a run. The random query defeats CDN/proxy caching.
@@ -617,7 +619,7 @@ try {
     if ($latestVer -match '^v[\d.]+$' -and $latestVer -ne $ScriptVersion) {
         Write-Warn2 "THIS COPY IS STALE: it is $ScriptVersion, but the published version is $latestVer."
         Write-Warn2 "Fixes shipped since $ScriptVersion are missing from this run. Delete any saved modeler.ps1, then re-paste:"
-        Write-Warn2 "    iex (irm 'https://raw.githubusercontent.com/dclawrence003/NME/main/modeler/Get-NerdioModelerJson.ps1')"
+        Write-Warn2 "    iex (irm 'https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-avd/Get-NerdioModelerJson.ps1')"
     }
 } catch { }
 

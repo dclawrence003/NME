@@ -1,3 +1,9 @@
+> **This repo has moved.** The tools now live at [Get-Nerdio/NME-SE](https://github.com/Get-Nerdio/NME-SE) and this copy is archived. It still works, but it no longer gets fixes. Use the new command:
+>
+> ```
+> iex (irm 'https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-avd/Get-NerdioModelerJson.ps1')
+> ```
+
 # Nerdio Modeler Import Builder
 
 Turns your actual AVD environment into an import file for the Nerdio Modeler. Every host pool, tenant-wide, plus a per-pool review of what was found and, where permitted, what those pools actually cost last month.

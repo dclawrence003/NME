@@ -1,3 +1,9 @@
+> **This repo has moved.** The tools now live at [Get-Nerdio/NME-SE](https://github.com/Get-Nerdio/NME-SE) and this copy is archived. It still works, but it no longer gets fixes. Use the new command:
+>
+> ```
+> curl -sSL https://raw.githubusercontent.com/Get-Nerdio/NME-SE/main/modeler-aws/nerdio_modeler_aws.py | python3 -
+> ```
+
 # Nerdio Modeler Import Builder for AWS
 
 Reads a customer's AWS virtual desktop estate and writes a Nerdio Modeler import file with the AVD equivalent proposed for each group.  One command in AWS CloudShell.  Read-only.  Nothing in the account is changed.
